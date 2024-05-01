@@ -1,0 +1,23 @@
+/* Estilo para body */
+body{
+    font-size: 22px;
+    background-color: #bb6464;
+    color: #555;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+header img{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    border-radius: 60px;
+    width: 20%;
+    height: 20%;
+}
