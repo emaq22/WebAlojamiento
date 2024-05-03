@@ -38,7 +38,7 @@ nav {
     display: flex; /* Mantenemos el menú como flexbox */
     justify-content: center; /* Centramos los elementos del menú horizontalmente */
     align-items: center; /* Centramos verticalmente los elementos */
-    background-color: #50524e; /* Cambiamos el color de fondo del menú para que se diferencie */
+    background-color: #929291; /* Cambiamos el color de fondo del menú para que se diferencie */
     height: 40px; /* Ajustamos la altura del nav para controlar su grosor */
 }
 
@@ -214,6 +214,43 @@ nav li {
     color: #18b7df;
 }
   
+/* Estilo para los artículos dentro de la Seccion2 */
+.Seccion2 article {
+  display: flex; /* Convertimos los artículos en contenedores flex */
+  flex-wrap: wrap; /* Permitimos que los elementos se envuelvan en varias filas si es necesario */
+  justify-content: space-between; /* Distribuimos los elementos con espacio entre ellos */
+  align-items: flex-start; /* Alineamos los elementos en la parte superior */
+}
+
+/* Ajuste para el tamaño de los elementos .Hotel dentro de los artículos */
+.Seccion2 article .Hotel {
+  flex-grow: 1; /* Permitimos que los elementos se expandan para llenar el espacio disponible */
+  width: calc(25% - 20px); /* Establecemos el ancho de los elementos */
+  margin: 40px; /* Añadimos margen entre los elementos */
+  position: relative;
+}
+
+/* Ajuste para limitar el número máximo de elementos por fila */
+@media screen and (max-width: 1200px) {
+  .Seccion2 article .Hotel {
+      width: calc(33.33% - 20px); /* Reducimos el ancho para mostrar 3 elementos por fila */
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .Seccion2 article .Hotel {
+      width: calc(50% - 20px); /* Reducimos el ancho para mostrar 2 elementos por fila */
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .Seccion2 article .Hotel {
+      width: calc(100% - 20px); /* Reducimos el ancho al 100% para mostrar 1 elemento por fila */
+  }
+}
+
+
+
   
   /* Pagina Nosotros */
 
@@ -222,3 +259,94 @@ nav li {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: #ca2d2d;
   }
+
+
+ /* Estilo para el pie de página */
+/*footer {
+  display: flex;
+  justify-content: center; /* Distribuye los elementos uniformemente */
+  /*align-items: center; /* Alinea los elementos verticalmente */
+  /*background-color: #f0f0f0;
+  /*padding: 10px 20px; /* Ajusta el espacio interno */
+/*}
+
+/* Estilo para el texto del pie de página */
+/*footer p {
+  margin: 0; /* Elimina el margen predeterminado */
+  /*order: 1; /* Cambia el orden para que aparezca al principio */
+/*}
+
+/* Estilo para los enlaces de redes sociales */
+/*footer a {
+/*  margin-left: 10px; /* Añade un margen a la izquierda para separar los enlaces */
+/*  order: 2; /* Cambia el orden para que aparezcan al final */
+/*}
+
+/* Estilo para las imágenes */
+/*footer img {
+/*  width: 30px; /* Define el ancho de las imágenes */
+/*  height: auto; /* Permite que la altura se ajuste automáticamente */
+/*}*/
+
+
+footer {
+  background-color: #929291;
+  height: auto;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-content p {
+  color: #ffffff;
+}
+
+.social-media {
+    display: flex;
+}
+
+.social-media img {
+  margin-left: 10px;
+  width: 30px; /* establece un ancho del 20% del contenedor padre */
+  height: auto; /* establece una altura automática para mantener la proporción */
+}
+
+/* Estilo para la sección 1 */
+.Seccion1 {
+  background-color: #f8f8f8; /* Color de fondo */
+  padding: 50px 20px; /* Espacio interno */
+  text-align: center; /* Alineación del texto */
+}
+
+/* Estilo para el título principal */
+.Seccion1 h1 {
+  color: #333; /* Color del texto */
+  font-size: 32px; /* Tamaño de fuente */
+  margin-bottom: 20px; /* Margen inferior */
+}
+
+/* Estilo para el subtítulo */
+.Seccion1 h2 {
+  color: #666; /* Color del texto */
+  font-size: 24px; /* Tamaño de fuente */
+  margin-bottom: 30px; /* Margen inferior */
+}
+
+/* Estilo para el enlace */
+.Seccion1 a {
+  display: inline-block; /* Convertir en línea en bloque para aplicar estilos */
+  background-color: #ff4500; /* Color de fondo */
+  color: #fff; /* Color del texto */
+  text-decoration: none; /* Quitar subrayado del enlace */
+  padding: 10px 20px; /* Espacio interno */
+  border-radius: 5px; /* Borde redondeado */
+  transition: background-color 0.3s; /* Transición suave */
+}
+
+/* Estilo para el enlace al pasar el ratón */
+.Seccion1 a:hover {
+  background-color: #d13400; /* Cambiar color de fondo */
+}
