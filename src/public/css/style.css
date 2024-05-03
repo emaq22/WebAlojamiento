@@ -503,6 +503,7 @@ main {
   margin-bottom: 100px; /* Agrega un margen inferior para dejar espacio para el footer */
 }
 
+
 /*Estilo para seccion 3 "Nosotros"*/
 .DeDondeSomos {
   display: flex;
@@ -558,3 +559,71 @@ main {
   border-radius: 50%;
 }
 /*Finalizacion de estilo de "Nosotros"*/
+
+ /* Aca comienza estilo de seccion CONTACTO.HTML */
+
+
+.forma{
+  width: 100%;
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-gap: 50px;
+  margin-top: 90px;
+}
+.forma h2{
+  margin-bottom: 15px;
+  font-size: 35px;
+  color: rgb(151, 92, 15);
+  }
+.forma p{
+  font-size: 17px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+.forma a{
+  font-size: 17px;
+  display: inline-block;
+  text-decoration: none;
+  width: 100px;
+  margin-bottom: 15px;
+  color: #000000;
+  font-weight: 700;
+}
+.forma a i{
+  color: rgb(184, 93, 32);
+  margin-right:5px;
+}
+.forma .campo,textarea{
+  width: 100%;
+  padding: 15px 10px;
+  font-size:15px;
+  border:1px solid color brown;
+  margin-bottom: 20px;
+  border-radius: 3px;
+  outline: 0px;
+  color: #ac3b07;
+}
+.form textarea{
+  max-width: 530px;
+  min-width: 530px;
+  min-height: 140px;
+  max-height: 150px;
+}
+.forma .btn-enviar{
+  padding:15px;
+  font-size: 16px;
+  border:none;
+  outline:0px;
+  background: hsl(25, 66%, 43%);
+  color: rgb(255, 255, 255);
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 300ms ease;
+}
+.forma .btn-enviar{
+ background-color: #ad6826;
+}
+/* finaliza estilo css de seccion CONTACTO*/
+
