@@ -224,7 +224,7 @@ nav li {
     font-size: 12px;
     text-align: left; /* Alineamos el contenido a la izquierda */
     margin-left: 20px; /* Ajustamos el margen izquierdo */
-    color: #18b7df;
+    color: hsl(24, 24%, 41%);
 }
   
 /* Estilo para los artículos dentro de la Seccion2 */
@@ -503,7 +503,64 @@ main {
   margin-bottom: 100px; /* Agrega un margen inferior para dejar espacio para el footer */
 }
 
-      /* Aca comienza estilo de seccion CONTACTO.HTML */
+
+/*Estilo para seccion 3 "Nosotros"*/
+.DeDondeSomos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.DeDondeSomos h2{
+  font-size: 60px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+.DeDondeSomos p{
+  font-size: 30px;
+  line-height: 1.5;
+  margin-right: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+  width: 750px;
+}
+ 
+.DeDondeSomos img{
+  width: 500px;
+  margin-right: 30px;
+  border-radius: 50%;
+}
+
+.AcercaDeNosotros {
+  margin-top: -300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.AcercaDeNosotros h3{
+  font-size: 30px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.AcercaDeNosotros p{
+  font-size: 20px;
+  line-height: 1.5;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  width: 750px;
+}
+.AcercaDeNosotros img{
+  width: 300px;
+  margin-right: 30px;
+  border-radius: 50%;
+}
+/*Finalizacion de estilo de "Nosotros"*/
+
+ /* Aca comienza estilo de seccion CONTACTO.HTML */
 
 
 .forma{
@@ -569,3 +626,4 @@ main {
  background-color: #ad6826;
 }
 /* finaliza estilo css de seccion CONTACTO*/
+
