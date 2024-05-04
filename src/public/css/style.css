@@ -10,398 +10,101 @@ body{
   box-sizing: border-box;
 }
 
-*::before, *::after {
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
 /* Estilo para body */
-/* Estilo para el cuerpo del documento */
 body {
   font-size: 22px;
   background-color: #ffffff;
   color: #555;
-  display: flex; /* Agregamos flex para que el contenido se muestre en columna */
-  flex-direction: column; /* Alineamos el contenido en columna */
+  display: flex;
+  /* Agregamos flex para que el contenido se muestre en columna */
+  flex-direction: column;
+  /* Alineamos el contenido en columna */
   /*align-items: center;  Centramos el contenido horizontalmente */
-  position: relative; /* Asegura que el footer se posicione en relación con el body */
-  margin-bottom: 100px; /* Agrega un margen inferior para dejar espacio para el footer */
+  position: relative;
+  /* Asegura que el footer se posicione en relación con el body */
+  margin-bottom: 100px;
+  /* Agrega un margen inferior para dejar espacio para el footer */
 }
 
 
 /* Estilo para el encabezado */
 header {
-    display: flex;
-    justify-content: center; /* Eliminamos la alineación al centro */
-    align-items: center;
-    flex-wrap: wrap;
-    margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  /* Eliminamos la alineación al centro */
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 50px;
 }
 
 /* Estilo para la imagen del encabezado */
 header img {
-    display: block; /* Cambiamos a bloque para que podamos aplicar márgenes automáticos */
-    margin: auto; /* Esto centrará la imagen horizontalmente */
-    border-radius: 60px;
-    width: 15%;
-    height: 15%;
+  display: block;
+  /* Cambiamos a bloque para que podamos aplicar márgenes automáticos */
+  margin: auto;
+  /* Esto centrará la imagen horizontalmente */
+  border-radius: 60px;
+  width: 15%;
+  height: 15%;
 }
 
-/* Ajustes para el menú de navegación */
-nav {
-    display: flex; /* Mantenemos el menú como flexbox */
-    justify-content: center; /* Centramos los elementos del menú horizontalmente */
-    align-items: center; /* Centramos verticalmente los elementos */
-    background-color: #929291; /* Cambiamos el color de fondo del menú para que se diferencie */
-    height: 40px; /* Ajustamos la altura del nav para controlar su grosor */
-}
-
-nav ul {
-    display: flex; /* Mantenemos el menú como flexbox */
-    list-style: none;
-    line-height: 40px; /* Igualamos la altura de línea al alto del nav */
-}
-
-nav li {
-    margin: 0 10px; /* Añadimos un margen entre los elementos del menú */
-}
-
-/* Ajustes para los elementos de navegación */
-.link {
-    text-decoration: none;
-    color: #fff;
-    font-size: 18px;
-    padding: 0.5rem;
-    position: relative;
-}
-
-.link::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    background: #fff;
-    border-radius: 5px;
-    transform: scaleX(0);
-    transition: all 0.6s ease;
-}
-
-.link::before {
-    bottom: 0;
-    left: 0;
-}
-
-.link:hover::before {
-    transform: scaleX(1);
-}
-
-#hire-me {
-    background-color: #fff;
-    display: flex;
-    align-items: center;
-    color: black;
-    border-radius: 5px;
-    padding: 0.2rem 0.5rem;
-    transition: all 0.6s ease;
-}
-
-#hire-me:hover {
-    background-color: transparent;
-    color: #fff;
-    padding: 0.5rem;
-}
-
-#hire-me i {
-    margin-right: 0.5rem;
-}
-
-.logo {
-    text-decoration: none;
-    color: #fff;
-    /*font-size: 40px;*/
-    padding: 0.5rem;
-    position: relative;
-    transition: 0.35s ease;
-}
-
-.logo:hover {
-    opacity: 0.5;
-}
-
-
-
-/* Imagenes Hoteles */
-
-.Hotel {
-    width: 400px;
-    aspect-ratio: 1 / 0.7;
-    border-radius: 8px;
-    position: relative;
-    cursor: pointer;
-  }
-  .Hotel .image-box {
-    width: 100%;
-    height: 100%;
-    border-radius: inherit;
-  }
-  .Hotel .image-box img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: 50% 90%;
-    border-radius: inherit;
-    transition: 0.5s ease-in-out;
-  }
-  
-  .Hotel::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    border: 2px solid white;
-    border-radius: inherit;
-    opacity: 0;
-    transition: 0.4s ease-in-out;
-  }
-  
-  .Hotel:hover img {
-    filter: grayscale(1) brightness(0.4);
-  }
-  .Hotel:hover::after {
-    opacity: 1;
-    inset: 20px;
-  }
-  
-  .content {
-    width: 80%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-  }
-  
-  .content h2,
-  .content p {
-    opacity: 0;
-    transition: 0.4s 0.2s ease;
-  }
-  .content h2 {
-    margin-bottom: 12px;
-    scale: 0.7;
-  }
-  .content p {
-    font-size: 14px;
-    line-height: 1.5;
-    color: #d1d1d1;
-    transform: translateY(50%);
-  }
-  .Hotel:hover .content h2 {
-    scale: 1;
-    opacity: 1;
-  }
-  .Hotel:hover .content P {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  
-   /* Pagina Inicio */
-
-.Seccion1 {
-    font-size: 12px;
-    text-align: left; /* Alineamos el contenido a la izquierda */
-    margin-left: 20px; /* Ajustamos el margen izquierdo */
-    color: #ca2d2d;
-}
-
-.Seccion2 {
-    font-size: 12px;
-    text-align: left; /* Alineamos el contenido a la izquierda */
-    margin-left: 20px; /* Ajustamos el margen izquierdo */
-    color: #432acc;
-}
-
-.Seccion3 {
-    font-size: 12px;
-    text-align: left; /* Alineamos el contenido a la izquierda */
-    margin-left: 20px; /* Ajustamos el margen izquierdo */
-    color: hsl(24, 24%, 41%);
-}
-  
-/* Estilo para los artículos dentro de la Seccion2 */
-.Seccion2 article {
-  display: flex; /* Convertimos los artículos en contenedores flex */
-  flex-wrap: wrap; /* Permitimos que los elementos se envuelvan en varias filas si es necesario */
-  justify-content: space-between; /* Distribuimos los elementos con espacio entre ellos */
-  align-items: flex-start; /* Alineamos los elementos en la parte superior */
-}
-
-/* Ajuste para el tamaño de los elementos .Hotel dentro de los artículos */
-.Seccion2 article .Hotel {
-  flex-grow: 1; /* Permitimos que los elementos se expandan para llenar el espacio disponible */
-  width: calc(25% - 20px); /* Establecemos el ancho de los elementos */
-  margin: 40px; /* Añadimos margen entre los elementos */
-  position: relative;
-}
-
-/* Ajuste para limitar el número máximo de elementos por fila */
-@media screen and (max-width: 1200px) {
-  .Seccion2 article .Hotel {
-      width: calc(33.33% - 20px); /* Reducimos el ancho para mostrar 3 elementos por fila */
-  }
-}
-
-@media screen and (max-width: 800px) {
-  .Seccion2 article .Hotel {
-      width: calc(50% - 20px); /* Reducimos el ancho para mostrar 2 elementos por fila */
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .Seccion2 article .Hotel {
-      width: calc(100% - 20px); /* Reducimos el ancho al 100% para mostrar 1 elemento por fila */
-  }
-}
-
-
-
-  
-  /* Pagina Nosotros */
-
-  .Inicial {
-    font-size: 16px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: #ca2d2d;
-  }
-
-
- /* Estilo para el pie de página */
-/*footer {
-  display: flex;
-  justify-content: center; /* Distribuye los elementos uniformemente */
-  /*align-items: center; /* Alinea los elementos verticalmente */
-  /*background-color: #f0f0f0;
-  /*padding: 10px 20px; /* Ajusta el espacio interno */
-/*}
-
-/* Estilo para el texto del pie de página */
-/*footer p {
-  margin: 0; /* Elimina el margen predeterminado */
-  /*order: 1; /* Cambia el orden para que aparezca al principio */
-/*}
-
-/* Estilo para los enlaces de redes sociales */
-/*footer a {
-/*  margin-left: 10px; /* Añade un margen a la izquierda para separar los enlaces */
-/*  order: 2; /* Cambia el orden para que aparezcan al final */
-/*}
-
-/* Estilo para las imágenes */
-/*footer img {
-/*  width: 30px; /* Define el ancho de las imágenes */
-/*  height: auto; /* Permite que la altura se ajuste automáticamente */
-/*}*/
-
-
-/* Estilo para el pie de página */
-footer {
-  background-color: #929291;
-  height: auto;
-  position: fixed; /* Mantener el footer fijo en la parte inferior de la ventana */
-  bottom: 0; /* Asegura que el footer esté alineado con el borde inferior de la ventana */
-  width: 100%; /* Hace que el footer ocupe todo el ancho de la ventana */
-  padding: 0; /* Agrega un relleno superior e inferior para separar el contenido del footer */
-}
-
-
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.footer-content p {
-  color: #ffffff;
-  margin: 0 10px;
-}
-
-.social-media {
-    display: flex;
-}
-
-.social-media img {
-  margin-left: 10px;
-  margin-top: 5px;
-  width: 30px; /* establece un ancho del 20% del contenedor padre */
-  height: auto; /* establece una altura automática para mantener la proporción */
-}
-
-.social-media img:last-child{
-  margin-right: 10px;
-}
-
-
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.footer-content p {
-  color: #ffffff;
-  margin: 0 10px;
-}
-
-.social-media {
-    display: flex;
-}
-
-.social-media img {
-  margin-left: 10px;
-  margin-top: 5px;
-  width: 30px; /* establece un ancho del 20% del contenedor padre */
-  height: auto; /* establece una altura automática para mantener la proporción */
-}
-
-.social-media img:last-child{
-  margin-right: 10px;
-}
 
 /* Estilo para la sección 1 */
 .Seccion1 {
-  background-color: #f8f8f8; /* Color de fondo */
-  padding: 50px 20px; /* Espacio interno */
-  text-align: center; /* Alineación del texto */
+  background-color: #f8f8f8;
+  /* Color de fondo */
+  padding: 50px 20px;
+  /* Espacio interno */
+  text-align: center;
+  /* Alineación del texto */
 }
 
 /* Estilo para el título principal */
 .Seccion1 h1 {
-  color: #333; /* Color del texto */
-  font-size: 32px; /* Tamaño de fuente */
-  margin-bottom: 20px; /* Margen inferior */
+  color: #333;
+  /* Color del texto */
+  font-size: 32px;
+  /* Tamaño de fuente */
+  margin-bottom: 20px;
+  /* Margen inferior */
 }
 
 /* Estilo para el subtítulo */
 .Seccion1 h2 {
-  color: #666; /* Color del texto */
-  font-size: 24px; /* Tamaño de fuente */
-  margin-bottom: 30px; /* Margen inferior */
+  color: #666;
+  /* Color del texto */
+  font-size: 24px;
+  /* Tamaño de fuente */
+  margin-bottom: 30px;
+  /* Margen inferior */
 }
 
 /* Estilo para el enlace */
 .Seccion1 a {
-  display: inline-block; /* Convertir en línea en bloque para aplicar estilos */
-  background-color: #ff4500; /* Color de fondo */
-  color: #fff; /* Color del texto */
-  text-decoration: none; /* Quitar subrayado del enlace */
-  padding: 10px 20px; /* Espacio interno */
-  border-radius: 5px; /* Borde redondeado */
-  transition: background-color 0.3s; /* Transición suave */
+  display: inline-block;
+  /* Convertir en línea en bloque para aplicar estilos */
+  /*background-color: #ff4500; /* Color de fondo */
+  color: #fff;
+  /* Color del texto */
+  text-decoration: none;
+  /* Quitar subrayado del enlace */
+  padding: 10px 20px;
+  /* Espacio interno */
+  border-radius: 5px;
+  /* Borde redondeado */
+  transition: background-color 0.3s;
+  /* Transición suave */
 }
 
 /* Estilo para el enlace al pasar el ratón */
-.Seccion1 a:hover {
+/*.Seccion1 a:hover {
   background-color: #d13400; /* Cambiar color de fondo */
-}
+/*}*/
 
 
 button {
@@ -417,10 +120,12 @@ button {
   font-size: inherit;
   font-family: inherit;
 }
+
 button.learn-more {
   width: 12rem;
   height: auto;
 }
+
 button.learn-more .circle {
   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
   position: relative;
@@ -431,6 +136,7 @@ button.learn-more .circle {
   background: #000000;
   border-radius: 1.625rem;
 }
+
 button.learn-more .circle .icon {
   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
   position: absolute;
@@ -439,6 +145,7 @@ button.learn-more .circle .icon {
   margin: auto;
   background: #fff;
 }
+
 button.learn-more .circle .icon.arrow {
   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
   left: 0.625rem;
@@ -446,6 +153,7 @@ button.learn-more .circle .icon.arrow {
   height: 0.125rem;
   background: none;
 }
+
 button.learn-more .circle .icon.arrow::before {
   position: absolute;
   content: "";
@@ -457,6 +165,7 @@ button.learn-more .circle .icon.arrow::before {
   border-right: 0.125rem solid #fff;
   transform: rotate(45deg);
 }
+
 button.learn-more .button-text {
   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
   position: absolute;
@@ -472,13 +181,16 @@ button.learn-more .button-text {
   text-align: center;
   text-transform: uppercase;
 }
+
 button:hover .circle {
   width: 100%;
 }
+
 button:hover .circle .icon.arrow {
   background: #fff;
   transform: translate(1rem, 0);
 }
+
 button:hover .button-text {
   color: #fff;
 }
@@ -500,23 +212,370 @@ button:hover .button-text {
 
 /* Estilo para el contenido principal */
 main {
-  margin-bottom: 100px; /* Agrega un margen inferior para dejar espacio para el footer */
+  margin-bottom: 100px;
+  /* Agrega un margen inferior para dejar espacio para el footer */
+}
+
+
+/* Ajustes para el menú de navegación */
+nav {
+  display: flex;
+  /* Mantenemos el menú como flexbox */
+  justify-content: center;
+  /* Centramos los elementos del menú horizontalmente */
+  align-items: center;
+  /* Centramos verticalmente los elementos */
+  background-color: #929291;
+  /* Cambiamos el color de fondo del menú para que se diferencie */
+  height: 40px;
+  /* Ajustamos la altura del nav para controlar su grosor */
+}
+
+nav ul {
+  display: flex;
+  /* Mantenemos el menú como flexbox */
+  list-style: none;
+  line-height: 40px;
+  /* Igualamos la altura de línea al alto del nav */
+}
+
+nav li {
+  margin: 0 10px;
+  /* Añadimos un margen entre los elementos del menú */
+}
+
+/* Ajustes para los elementos de navegación */
+.link {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  padding: 0.5rem;
+  position: relative;
+}
+
+.link::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  border-radius: 5px;
+  transform: scaleX(0);
+  transition: all 0.6s ease;
+}
+
+.link::before {
+  bottom: 0;
+  left: 0;
+}
+
+.link:hover::before {
+  transform: scaleX(1);
+}
+
+#hire-me {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  color: black;
+  border-radius: 5px;
+  padding: 0.2rem 0.5rem;
+  transition: all 0.6s ease;
+}
+
+#hire-me:hover {
+  background-color: transparent;
+  color: #fff;
+  padding: 0.5rem;
+}
+
+#hire-me i {
+  margin-right: 0.5rem;
+}
+
+.logo {
+  text-decoration: none;
+  color: #fff;
+  /*font-size: 40px;*/
+  padding: 0.5rem;
+  position: relative;
+  transition: 0.35s ease;
+}
+
+.logo:hover {
+  opacity: 0.5;
+}
+
+
+/* Estilo para los artículos dentro de la Seccion2 */
+.Seccion2 article {
+  display: flex;
+  /* Convertimos los artículos en contenedores flex */
+  flex-wrap: wrap;
+  /* Permitimos que los elementos se envuelvan en varias filas si es necesario */
+  justify-content: space-between;
+  /* Distribuimos los elementos con espacio entre ellos */
+  align-items: flex-start;
+  /* Alineamos los elementos en la parte superior */
+}
+
+/* Ajuste para el tamaño de los elementos .Hotel dentro de los artículos */
+.Seccion2 article .Hotel {
+  flex-grow: 1;
+  /* Permitimos que los elementos se expandan para llenar el espacio disponible */
+  width: calc(25% - 20px);
+  /* Establecemos el ancho de los elementos */
+  margin: 40px;
+  /* Añadimos margen entre los elementos */
+  position: relative;
+}
+
+/* Ajuste para limitar el número máximo de elementos por fila */
+@media screen and (max-width: 1200px) {
+  .Seccion2 article .Hotel {
+    width: calc(33.33% - 20px);
+    /* Reducimos el ancho para mostrar 3 elementos por fila */
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .Seccion2 article .Hotel {
+    width: calc(50% - 20px);
+    /* Reducimos el ancho para mostrar 2 elementos por fila */
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .Seccion2 article .Hotel {
+    width: calc(100% - 20px);
+    /* Reducimos el ancho al 100% para mostrar 1 elemento por fila */
+  }
+}
+
+
+/* Imagenes Hoteles */
+
+.Hotel {
+  width: 400px;
+  aspect-ratio: 1 / 0.7;
+  border-radius: 8px;
+  position: relative;
+  cursor: pointer;
+}
+
+.Hotel .image-box {
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+}
+
+.Hotel .image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 90%;
+  border-radius: inherit;
+  transition: 0.5s ease-in-out;
+}
+
+.Hotel::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 2px solid white;
+  border-radius: inherit;
+  opacity: 0;
+  transition: 0.4s ease-in-out;
+}
+
+.Hotel:hover img {
+  filter: grayscale(1) brightness(0.4);
+}
+
+.Hotel:hover::after {
+  opacity: 1;
+  inset: 20px;
+}
+
+.content {
+  width: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.content h2,
+.content p {
+  opacity: 0;
+  transition: 0.4s 0.2s ease;
+}
+
+.content h2 {
+  margin-bottom: 12px;
+  scale: 0.7;
+}
+
+.content a {
+  color: inherit;
+  /* Utiliza el color del texto del padre */
+  text-decoration: none;
+  /* Quita el subrayado */
+}
+
+.content p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #d1d1d1;
+  transform: translateY(50%);
+}
+
+.Hotel:hover .content h2 {
+  scale: 1;
+  opacity: 1;
+}
+
+.Hotel:hover .content P {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* Pagina Inicio */
+
+.Seccion1 {
+  font-size: 12px;
+  text-align: left;
+  /* Alineamos el contenido a la izquierda */
+  margin-left: 20px;
+  /* Ajustamos el margen izquierdo */
+  color: #ca2d2d;
+}
+
+.Seccion2 {
+  font-size: 12px;
+  text-align: left;
+  /* Alineamos el contenido a la izquierda */
+  margin-left: 20px;
+  /* Ajustamos el margen izquierdo */
+  color: #ffffff;
+}
+
+.Seccion3 {
+  font-size: 12px;
+  text-align: left;
+  /* Alineamos el contenido a la izquierda */
+  margin-left: 20px;
+  /* Ajustamos el margen izquierdo */
+  color: hsl(24, 24%, 41%);
+}
+
+
+/* Estilo para el pie de página */
+footer {
+  background-color: #929291;
+  height: auto;
+  position: fixed;
+  /* Mantener el footer fijo en la parte inferior de la ventana */
+  bottom: 0;
+  /* Asegura que el footer esté alineado con el borde inferior de la ventana */
+  width: 100%;
+  /* Hace que el footer ocupe todo el ancho de la ventana */
+  padding: 0;
+  /* Agrega un relleno superior e inferior para separar el contenido del footer */
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-content p {
+  color: #ffffff;
+  margin: 0 10px;
+  font-size: 14px;
+}
+
+.footer-content p:first-child {
+  margin-left: 0;
+}
+
+.footer-content p:last-child {
+  margin-right: 0;
+}
+
+.social-media {
+  display: flex;
+}
+
+.social-media img {
+  margin-left: 10px;
+  margin-top: 5px;
+  width: 30px;
+  /* establece un ancho del 20% del contenedor padre */
+  height: auto;
+  /* establece una altura automática para mantener la proporción */
+}
+
+.social-media img:last-child {
+  margin-right: 10px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-content p {
+  color: #ffffff;
+  margin: 0 10px;
+}
+
+.social-media {
+  display: flex;
+}
+
+.social-media img {
+  margin-left: 10px;
+  margin-top: 5px;
+  width: 30px;
+  /* establece un ancho del 20% del contenedor padre */
+  height: auto;
+  /* establece una altura automática para mantener la proporción */
+}
+
+.social-media img:last-child {
+  margin-right: 10px;
 }
 
 
 /*Estilo para seccion 3 "Nosotros"*/
+
+/* Pagina Nosotros */
+
+.Inicial {
+  font-size: 16px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: #ca2d2d;
+}
+
 .DeDondeSomos {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
 }
-.DeDondeSomos h2{
+
+.DeDondeSomos h2 {
   font-size: 60px;
   margin-bottom: 15px;
   text-align: center;
 }
-.DeDondeSomos p{
+
+.DeDondeSomos p {
   font-size: 30px;
   line-height: 1.5;
   margin-right: 10px;
@@ -524,8 +583,8 @@ main {
   text-align: center;
   width: 750px;
 }
- 
-.DeDondeSomos img{
+
+.DeDondeSomos img {
   width: 500px;
   margin-right: 30px;
   border-radius: 50%;
@@ -539,13 +598,13 @@ main {
   height: 100vh;
 }
 
-.AcercaDeNosotros h3{
+.AcercaDeNosotros h3 {
   font-size: 30px;
   margin-bottom: 15px;
   text-align: center;
 }
 
-.AcercaDeNosotros p{
+.AcercaDeNosotros p {
   font-size: 20px;
   line-height: 1.5;
   margin-right: 10px;
@@ -553,36 +612,40 @@ main {
   text-align: center;
   width: 750px;
 }
-.AcercaDeNosotros img{
+
+.AcercaDeNosotros img {
   width: 300px;
   margin-right: 30px;
   border-radius: 50%;
 }
+
 /*Finalizacion de estilo de "Nosotros"*/
 
- /* Aca comienza estilo de seccion CONTACTO.HTML */
+/* Aca comienza estilo de seccion CONTACTO.HTML */
 
-
-.forma{
+.forma {
   width: 100%;
   max-width: 1100px;
   margin: auto;
   display: grid;
-  grid-template-columns: repeat(2,1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-gap: 50px;
   margin-top: 90px;
 }
-.forma h2{
+
+.forma h2 {
   margin-bottom: 15px;
   font-size: 35px;
   color: rgb(151, 92, 15);
-  }
-.forma p{
+}
+
+.forma p {
   font-size: 17px;
   line-height: 1.6;
   margin-bottom: 30px;
 }
-.forma a{
+
+.forma a {
   font-size: 17px;
   display: inline-block;
   text-decoration: none;
@@ -591,39 +654,45 @@ main {
   color: #000000;
   font-weight: 700;
 }
-.forma a i{
+
+.forma a i {
   color: rgb(184, 93, 32);
-  margin-right:5px;
+  margin-right: 5px;
 }
-.forma .campo,textarea{
+
+.forma .campo,
+textarea {
   width: 100%;
   padding: 15px 10px;
-  font-size:15px;
-  border:1px solid color brown;
+  font-size: 15px;
+  border: 1px solid color brown;
   margin-bottom: 20px;
   border-radius: 3px;
   outline: 0px;
   color: #ac3b07;
 }
-.form textarea{
+
+.form textarea {
   max-width: 530px;
   min-width: 530px;
   min-height: 140px;
   max-height: 150px;
 }
-.forma .btn-enviar{
-  padding:15px;
+
+.forma .btn-enviar {
+  padding: 15px;
   font-size: 16px;
-  border:none;
-  outline:0px;
+  border: none;
+  outline: 0px;
   background: hsl(25, 66%, 43%);
   color: rgb(255, 255, 255);
   border-radius: 3px;
   cursor: pointer;
   transition: all 300ms ease;
 }
-.forma .btn-enviar{
- background-color: #ad6826;
-}
-/* finaliza estilo css de seccion CONTACTO*/
 
+.forma .btn-enviar {
+  background-color: #ad6826;
+}
+
+/* finaliza estilo css de seccion CONTACTO*/
